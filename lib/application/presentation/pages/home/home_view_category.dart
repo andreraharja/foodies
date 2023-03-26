@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:foodies/application/presentation/widget/screen_configuration.dart';
@@ -22,7 +21,7 @@ class _DropDownCategoryState extends State<DropDownCategory> {
   Widget build(BuildContext context) {
     return Container(
       height: ScreenConfiguration.screenHeight * 0.07,
-      margin: EdgeInsets.only(bottom: 10),
+      margin: const EdgeInsets.only(bottom: 10),
       padding: const EdgeInsets.all(10.0),
       decoration: const BoxDecoration(
           color: Colors.orangeAccent,

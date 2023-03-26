@@ -2,12 +2,17 @@
 > Foodies.
 
 ## Table of Contents
+* [Download](#download)
 * [General Info](#general-information)
 * [Technologies Used](#technologies-used)
 * [Library Used](#library-used)
 * [Features](#features)
-* [Screenshot](#sc)
+* [Screenshot](#screenshot)
 * [Acknowledgements](#acknowledgements)
+
+## Download
+[foodies.apk via Google Drive](https://drive.google.com/file/d/1KUXwfeFpS0XF5HM32ruJNkn6GJXR_AQT/view?usp=share_link)
+[foodies.apk via Repository](https://github.com/andreraharja/foodies/build/app/outputs/flutter-apk/foodies.apk)
 
 ## General Information
 - A simple app that lets you find and see food recipes related on food category.

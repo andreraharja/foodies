@@ -21,6 +21,7 @@ class _DropDownCategoryState extends State<DropDownCategory> {
   Widget build(BuildContext context) {
     return Container(
       height: ScreenConfiguration.screenHeight * 0.07,
+      width: double.infinity,
       margin: const EdgeInsets.only(bottom: 10),
       padding: const EdgeInsets.all(10.0),
       decoration: const BoxDecoration(
@@ -30,13 +31,17 @@ class _DropDownCategoryState extends State<DropDownCategory> {
         return Row(
           children: [
             SizedBox(
-                width: ScreenConfiguration.screenWidth * 0.3,
-                child: Text(
-                  'Food Category',
-                  style: Theme.of(context).textTheme.overline!.apply(
-                      color: Colors.white,
-                      fontWeightDelta: 1,
-                      fontSizeDelta: constraints.maxHeight * 0.2),
+                width: ScreenConfiguration.screenWidth * 0.4,
+                child: LayoutBuilder(
+                  builder: (context, constraints) {
+                    return Text(
+                      'Food Category',
+                      style: Theme.of(context).textTheme.overline!.apply(
+                          color: Colors.white,
+                          fontWeightDelta: 1,
+                          fontSizeDelta: constraints.maxWidth * 0.04),
+                    );
+                  }
                 )),
             Expanded(
               child: Align(

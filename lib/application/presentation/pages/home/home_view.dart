@@ -5,8 +5,8 @@ import 'package:foodies/application/presentation/bloc/food/food_bloc.dart';
 import 'package:foodies/application/presentation/widget/screen_configuration.dart';
 import 'package:lottie/lottie.dart';
 
-import '../detail/detail_view.dart';
 import 'home_view_category.dart';
+import 'home_view_food.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -42,41 +42,7 @@ class HomePage extends StatelessWidget {
                   if (state is LoadingFood) {
                     return const Center(child: CircularProgressIndicator());
                   } else if (state is HasDataFood) {
-                    return ListView.builder(
-                        itemCount: state.lsFood.length,
-                        itemBuilder: (context, index) {
-                          return GestureDetector(
-                              onTap: () {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) => DetailView(
-                                              id: state.lsFood[index].idMeal,
-                                              strMeal:
-                                                  state.lsFood[index].strMeal,
-                                              strMealThumb: state
-                                                  .lsFood[index].strMealThumb,
-                                            )));
-                              },
-                              child: SizedBox(
-                                height: ScreenConfiguration.screenHeight * 0.15,
-                                child: Card(
-                                  elevation: 5,
-                                  child: Row(
-                                    children: [
-                                      Image.network(
-                                          state.lsFood[index].strMealThumb),
-                                      const SizedBox(
-                                        width: 10,
-                                      ),
-                                      Expanded(
-                                          child: Text(
-                                              state.lsFood[index].strMeal)),
-                                    ],
-                                  ),
-                                ),
-                              ));
-                        });
+                    return ListViewFood(lsFood: state.lsFood);
                   } else {
                     return Container();
                   }
